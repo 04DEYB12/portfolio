@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/dm_logo.png" type="image/png">
+    <title>dave.malaran</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-800 shadow-lg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <img src="./assets/dm_logo.png" alt="DM Logo" class="w-12 h-12 rounded-full">
+                    <p class="text-xl">dave.malaran</p>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8 text-gray-300">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#awards" class="nav-link">Awards</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
+                    <p id="datetime">Date and Time</p>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="mobile-menu-btn"
+                        class="md:hidden text-3xl hover:text-blue-400 transition-colors duration-300">
+                    ☰
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-800 pt-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#about" class="px-4 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                        <span class="transition-transform duration-300 group-hover:translate-x-2">
+                            About
+                        </span>
+                    </a>
+
+                    <a href="#awards" class="px-4 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                        <span class="transition-transform duration-300 group-hover:translate-x-2">
+                            Awards
+                        </span>
+                    </a>
+
+                    <a href="#projects" class="px-4 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                        <span class="transition-transform duration-300 group-hover:translate-x-2">
+                            Projects
+                        </span>
+                    </a>
+
+                    <a href="#contact" class="px-4 py-3 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-gray-800/70 transition-all duration-300">
+                        <span class="transition-transform duration-300 group-hover:translate-x-2">
+                            Contact
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto w-full">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Content -->
+                <div class="text-center lg:text-left order-2 lg:order-1">
+
+                    <p class="text-blue-400 font-medium mb-4">▸ Available for opportunities — 2026</p>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">Dave Malaran</h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-400 mb-6">PHP | Web Developer</h2>
+                    <p class="text-gray-400 max-w-xl mb-8 text-lg leading-relaxed">
+                        I'm BSIT graduate from Granby Colleges of Science and Technology. I design and develop web-based and desktop applications, with a focus on database-driven systems, responsive interfaces, and software that solves real problems.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-8">
+                        <a href="#projects"
+                           class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-all duration-300">
+                            View Projects
+                        </a>
+
+                        <a href="#contact"
+                           class="px-6 py-3 border border-gray-700 hover:border-blue-500 hover:text-blue-400 rounded-lg font-medium transition-all duration-300">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="https://github.com/04DEYB12" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
+                            <i class="fa-brands fa-github text-xl text-white group-hover:text-blue-400 transition-colors"></i>
+                            <span class="font-medium">GitHub</span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/davemalaran" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
+                            <i class="fa-brands fa-linkedin text-xl text-white group-hover:text-blue-400 transition-colors"></i>
+                            <span class="font-medium">LinkedIn</span>
+                        </a>
+
+                        <a href="https://www.facebook.com/04.deyb.12" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
+                            <i class="fa-brands fa-facebook text-xl text-white group-hover:text-blue-400 transition-colors"></i>
+                            <span class="font-medium">Facebook</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Right Content -->
+                <div class="flex justify-center order-1 lg:order-2">
+                    <div class="relative">
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+                        <!-- Profile Image -->
+                        <img src="assets/malarandave.png" alt="Profile Picture" class="relative w-72 h-full md:w-96 md:h-full object-cover rounded-lg shadow-2xl shadow-blue-500/20">
+                        <p class="absolute bottom-[-16px] left-4 border-2 border-blue-500 bg-gray-900 text-white font-medium text-sm px-4 py-2 rounded-lg shadow-lg">
+                            ● BSIT '26
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
+            <div class="bg-gray-800 rounded-2xl p-8">
+                <p class="text-lg text-gray-300 leading-relaxed mb-6">
+                    I'm a passionate developer with a keen eye for detail and a love for creating elegant solutions to complex problems. With expertise in both front-end and back-end technologies, I bring ideas to life through clean, efficient code.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    My journey in tech has equipped me with a diverse skill set, from designing intuitive user interfaces to building robust server-side applications. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills & Technologies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400">Frontend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• HTML5 & CSS3</li>
+                        <li>• JavaScript (ES6+)</li>
+                        <li>• React.js</li>
+                        <li>• Tailwind CSS</li>
+                        <li>• Vue.js</li>
+                    </ul>
+                </div>
+                <!-- Backend -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Backend</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Node.js</li>
+                        <li>• PHP</li>
+                        <li>• Python</li>
+                        <li>• Express.js</li>
+                        <li>• REST APIs</li>
+                    </ul>
+                </div>
+                <!-- Database -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-green-400">Database</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• MySQL</li>
+                        <li>• PostgreSQL</li>
+                        <li>• MongoDB</li>
+                        <li>• Redis</li>
+                    </ul>
+                </div>
+                <!-- Tools -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-yellow-400">Tools & DevOps</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Git & GitHub</li>
+                        <li>• Docker</li>
+                        <li>• AWS</li>
+                        <li>• CI/CD</li>
+                        <li>• Linux</li>
+                    </ul>
+                </div>
+                <!-- Design -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-pink-400">Design</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Figma</li>
+                        <li>• Adobe XD</li>
+                        <li>• UI/UX Principles</li>
+                        <li>• Responsive Design</li>
+                    </ul>
+                </div>
+                <!-- Soft Skills -->
+                <div class="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
+                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">Soft Skills</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Problem Solving</li>
+                        <li>• Team Collaboration</li>
+                        <li>• Communication</li>
+                        <li>• Time Management</li>
+                        <li>• Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span class="text-4xl">🚀</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">A full-featured online store with payment integration and inventory management.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <span class="text-4xl">📊</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-400 mb-4">Real-time data visualization dashboard with interactive charts and reports.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">D3.js</span>
+                            <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">PHP</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <span class="text-4xl">📱</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mobile App API</h3>
+                        <p class="text-gray-400 mb-4">RESTful API service supporting mobile applications with authentication.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Express</span>
+                            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Let's Connect</h3>
+                    <p class="text-gray-300 mb-8">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl">📧</span>
+                            <a href="mailto:dave@example.com" class="text-blue-400 hover:underline">dave@example.com</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl">🔗</span>
+                            <a href="#" class="text-blue-400 hover:underline">LinkedIn</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl">🐙</span>
+                            <a href="#" class="text-blue-400 hover:underline">GitHub</a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl">📍</span>
+                            <span class="text-gray-300">Philippines</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 py-3 rounded-lg font-semibold transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-400">© 2024 Dave Malaran. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/mobileView.js"></script>
+    <script src="./scripts/dateTIme.js"></script>
+    <script> 
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        });
+    </script>
+</body>
+</html>
