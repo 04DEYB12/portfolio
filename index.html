@@ -309,52 +309,9 @@
     <section id="projects" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                        <span class="text-4xl">🚀</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-400 mb-4">A full-featured online store with payment integration and inventory management.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
-                        <span class="text-4xl">📊</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Real-time data visualization dashboard with interactive charts and reports.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-sm">D3.js</span>
-                            <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">PHP</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
-                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                        <span class="text-4xl">📱</span>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Mobile App API</h3>
-                        <p class="text-gray-400 mb-4">RESTful API service supporting mobile applications with authentication.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm">Express</span>
-                            <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
         </div>
     </section>
@@ -421,10 +378,10 @@
     <script src="./scripts/mobileView.js"></script>
     <script src="./scripts/dateTIme.js"></script>
     <script src="./scripts/awards.js"></script>
+    <script src="./scripts/projects.js"></script>
     <script> 
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('logo-text').innerHTML = '<span class="text-gray-400">&lt;/</span> <span class="text-blue-400">dave</span>loper <span class="text-gray-400">&gt;</span>';
-            document.getElementById('projects').classList.add('hidden');
             document.getElementById('contact').classList.add('hidden');
             updateDateTime();
             setInterval(updateDateTime, 1000);
