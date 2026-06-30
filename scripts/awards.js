@@ -31,7 +31,7 @@ const awards = [
         title: "Database Management System 1",
         image: "assets/awards/dbms.jpg",
         alt: "Database Management System 1",
-        year: "2025",
+        year: "2024",
         description: "Recognized for excellence in database design, SQL development, normalization, and implementation of data management solutions."
     },
     {
