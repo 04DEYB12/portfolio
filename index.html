@@ -484,4 +484,22 @@
         }
     </script>
 </body>
+<div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <!-- Close button -->
+    <button
+        id="closeModal"
+        class="absolute top-5 right-5 text-white text-4xl hover:text-gray-300"
+    >
+        &times;
+    </button>
+
+    <!-- Image -->
+    <img
+        id="modalImage"
+        src=""
+        alt="Project Image"
+        class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl"
+    >
+</div>
+<script src="./scripts/imageModal.js"></script>
 </html>

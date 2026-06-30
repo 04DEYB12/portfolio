@@ -5,7 +5,9 @@ const techstack_color = {
     "TailwindCss": "bg-blue-500/20 text-blue-400",
     "JavaScript": "bg-yellow-500/20 text-yellow-400",
     "C# Winforms": "bg-purple-500/20 text-purple-400",
-    "CSS": "bg-pink-500/20 text-pink-400"
+    "CSS": "bg-pink-500/20 text-pink-400",
+    "MVC": "bg-indigo-500/20 text-indigo-400",
+    "SCRUM": "bg-teal-500/20 text-teal-400"
 };
 
 const projects = [
@@ -14,7 +16,7 @@ const projects = [
         image: "assets/projects/piamis.png",
         alt: "Patient Information & Medical Inventory System",
         description: "Full-stack web system for the GCST Clinic managing patient records, consultations, and medical inventory. Presented at the institutional Capstone Symposium.",
-        techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
+        techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "SCRUM"],
         role: "CAPSTONE - LEAD DEVELOPER",
         link: "https://piamis-symposium.vercel.app/"
     },
@@ -31,7 +33,7 @@ const projects = [
         image: "assets/projects/bicpos.png",
         alt: "Blue Iris Cup — POS & Mini-Kiosk",
         description: "POS and self-service kiosk system for streamlining orders, payments, and inventory management.",
-        techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
+        techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "MVC", "SCRUM"],
         role: "FULL-STACK DEVELOPER"
     },
     {
@@ -65,7 +67,12 @@ projects.forEach(project => {
 
     projectsContainer.innerHTML += `
         <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300">
-            <img src="${project.image}" alt="${project.alt}" class="w-full h-48 object-cover">
+            <img
+                src="${project.image}"
+                alt="${project.alt}"
+                class="w-full h-48 object-cover cursor-pointer hover:scale-105 transition"
+                onclick="openImage('${project.image}')"
+            >
 
             <div class="p-6">
                 <span class="inline-block mb-3 text-xs font-semibold tracking-wider text-cyan-400 uppercase">
