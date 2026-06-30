@@ -68,7 +68,10 @@ awardsItems.forEach(award => {
     card.className = "bg-gray-900 rounded-2xl p-6";
 
     card.innerHTML = `
-        <img src="${award.image}" alt="${award.title}" class="w-full h-48 object-cover rounded-lg mb-4" />
+        <img src="${award.image}" alt="${award.alt}"
+            class="w-full h-48 object-cover cursor-pointer hover:scale-105 transition"
+            onclick="openImage('${award.image}')"
+        >
         <p class="text-blue-400 font-bold text-sm mb-2">${award.year}</p>
         <h3 class="text-xl font-bold mb-2">${award.title}</h3>
         <p class="text-gray-400">${award.description}</p>
