@@ -13,7 +13,8 @@ const techstack_color = {
 const projects = [
     {
         title: "Patient Information & Medical Inventory System",
-        image: "assets/projects/piamis.png",
+        folder: "piamis",
+        imageCount: 18,
         alt: "Patient Information & Medical Inventory System",
         description: "Full-stack web system for the GCST Clinic managing patient records, consultations, and medical inventory. Presented at the institutional Capstone Symposium.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "SCRUM"],
@@ -22,7 +23,8 @@ const projects = [
     },
     {
         title: "Servpro Database Management System",
-        image: "assets/projects/servpro.jpg",
+        folder: "servpro",
+        imageCount: 1,
         alt: "Servpro Database Management System",
         description: "Added new features and performed system maintenance during on-the-job training, gaining production-environment experience.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
@@ -30,7 +32,8 @@ const projects = [
     },
     {
         title: "Blue Iris Cup — POS & Mini-Kiosk",
-        image: "assets/projects/bicpos.png",
+        folder: "bicpos",
+        imageCount: 1,
         alt: "Blue Iris Cup — POS & Mini-Kiosk",
         description: "POS and self-service kiosk system for streamlining orders, payments, and inventory management.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "MVC", "SCRUM"],
@@ -38,7 +41,8 @@ const projects = [
     },
     {
         title: "Faculty Performance Evaluation System",
-        image: "assets/projects/fpes.png",
+        folder: "fpes",
+        imageCount: 1,
         alt: "Faculty Performance Evaluation System",
         description: "Web platform for evaluating instructors at Granby Colleges with dynamic questionnaires, real-time ranking, email notifications, and dedicated dashboards.",
         techstack: ["PHP", "MySQL", "HTML5", "CSS", "JavaScript"],
@@ -46,7 +50,8 @@ const projects = [
     },
     {
         title: "Granby Point of Sale (POS) System",
-        image: "assets/projects/granbypos.png",
+        folder: "granbypos",
+        imageCount: 1,
         alt: "Granby Point of Sale (POS) System",
         description: "Desktop POS used by the college cashier for processing student tuition and fees, with transaction recording and receipt generation.",
         techstack: ["C# Winforms", "MySQL"],
@@ -56,7 +61,7 @@ const projects = [
 
 const projectsContainer = document.getElementById("projects-container");
 
-projects.forEach(project => {
+projects.forEach((project, index) => {
     const techStackHTML = project.techstack
         .map(tech => `
             <span class="${techstack_color[tech] || 'bg-gray-500/20 text-gray-400'} px-3 py-1 rounded-full text-sm">
@@ -64,15 +69,49 @@ projects.forEach(project => {
             </span>
         `)
         .join("");
+        
+    const images = Array.from(
+        { length: project.imageCount },
+        (_, i) => `assets/projects/${project.folder}/${i + 1}.png`
+    );
+        
+    const carouselHTML = `
+        <div class="relative overflow-hidden">
+            <div id="carousel-${index}" class="flex transition-transform duration-500">
+                ${images.map(image => `
+                    <img
+                        src="${image}"
+                        alt="${project.alt}"
+                        onclick="openImage('${image}')"
+                        class="w-full h-56 object-cover flex-shrink-0 cursor-pointer"
+                    >
+                `).join("")}
+            </div>
+
+            ${
+                project.imageCount > 1
+                    ? `
+                <button
+                    onclick="moveSlide(${index}, -1)"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2">
+                    <i class='bx bx-chevron-left'></i>
+                </button>
+
+                <button
+                    onclick="moveSlide(${index}, 1)"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2">
+                    <i class='bx bx-chevron-right'></i>
+                </button>
+            `
+                    : ""
+            }
+        </div>
+    `;
 
     projectsContainer.innerHTML += `
         <div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition-all duration-300">
-            <img
-                src="${project.image}"
-                alt="${project.alt}"
-                class="w-full h-48 object-cover cursor-pointer hover:scale-105 transition"
-                onclick="openImage('${project.image}')"
-            >
+
+            ${carouselHTML}
 
             <div class="p-6">
                 <span class="inline-block mb-3 text-xs font-semibold tracking-wider text-cyan-400 uppercase">
@@ -99,6 +138,21 @@ projects.forEach(project => {
                         : ""
                 }
             </div>
+
         </div>
     `;
 });
+
+const currentSlides = {};
+
+function moveSlide(index, direction) {
+    const carousel = document.getElementById(`carousel-${index}`);
+    const total = carousel.children.length;
+
+    currentSlides[index] ??= 0;
+
+    currentSlides[index] =
+        (currentSlides[index] + direction + total) % total;
+
+    carousel.style.transform = `translateX(-${currentSlides[index] * 100}%)`;
+}
