@@ -24,7 +24,7 @@ const projects = [
     {
         title: "Servpro Database Management System",
         folder: "servpro",
-        imageCount: 1,
+        imageCount: 4,
         alt: "Servpro Database Management System",
         description: "Added new features and performed system maintenance during on-the-job training, gaining production-environment experience.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
