@@ -42,7 +42,7 @@ const projects = [
     {
         title: "Faculty Performance Evaluation System",
         folder: "fpes",
-        imageCount: 1,
+        imageCount: 11,
         alt: "Faculty Performance Evaluation System",
         description: "Web platform for evaluating instructors at Granby Colleges with dynamic questionnaires, real-time ranking, email notifications, and dedicated dashboards.",
         techstack: ["PHP", "MySQL", "HTML5", "CSS", "JavaScript"],
