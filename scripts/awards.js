@@ -35,6 +35,13 @@ const awards = [
         description: "Recognized for excellence in database design, SQL development, normalization, and implementation of data management solutions."
     },
     {
+        title: "Discrete Structure",
+        image: "assets/awards/discrete.jpg",
+        alt: "Discrete Structure",
+        year: "2024",
+        description: "Awarded for demonstrating strong analytical thinking and proficiency in discrete mathematics concepts."
+    },
+    {
         title: "Outstanding Software Development Award",
         image: "assets/awards/software.jpg",
         alt: "Outstanding Software Development Award",
@@ -72,7 +79,7 @@ awardsItems.forEach(award => {
             class="w-full h-48 object-cover cursor-pointer hover:scale-105 transition"
             onclick="openImage('${award.image}')"
         >
-        <p class="text-blue-400 font-bold text-sm mb-2">${award.year}</p>
+        <p class="text-blue-400 font-bold text-sm mb-2 mt-2">${award.year}</p>
         <h3 class="text-xl font-bold mb-2">${award.title}</h3>
         <p class="text-gray-400">${award.description}</p>
     `;
