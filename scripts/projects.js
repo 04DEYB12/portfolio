@@ -33,7 +33,7 @@ const projects = [
     {
         title: "Blue Iris Cup — POS & Mini-Kiosk",
         folder: "bicpos",
-        imageCount: 1,
+        imageCount: 29,
         alt: "Blue Iris Cup — POS & Mini-Kiosk",
         description: "POS and self-service kiosk system for streamlining orders, payments, and inventory management.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "MVC", "SCRUM"],
