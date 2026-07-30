@@ -16,7 +16,7 @@ const projects = [
         folder: "piamis",
         imageCount: 18,
         alt: "Patient Information & Medical Inventory System",
-        description: "Full-stack web system for the GCST Clinic managing patient records, consultations, and medical inventory. Presented at the institutional Capstone Symposium.",
+        description: "Led the development of a web-based clinic management system by implementing patient record management and medical inventory tracking using Scrum, improving record organization and supporting more efficient clinic operations.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "SCRUM"],
         role: "CAPSTONE - LEAD DEVELOPER",
         link: "https://piamis-symposium.vercel.app/"
@@ -26,7 +26,7 @@ const projects = [
         folder: "servpro",
         imageCount: 4,
         alt: "Servpro Database Management System",
-        description: "Added new features and performed system maintenance during on-the-job training, gaining production-environment experience.",
+        description: "Enhanced an internal database management system by implementing new features, resolving application issues, and performing system maintenance, improving system functionality and ensuring reliable day-to-day operations.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
         role: "CONTRIBUTOR - OJT"
     },
@@ -35,7 +35,7 @@ const projects = [
         folder: "bicpos",
         imageCount: 29,
         alt: "Blue Iris Cup — POS & Mini-Kiosk",
-        description: "POS and self-service kiosk system for streamlining orders, payments, and inventory management.",
+        description: "Developed a POS and self-service mini-kiosk system using the MVC architecture and Scrum methodology, streamlining cashier transactions, improving ordering efficiency, and enhancing the customer experience.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript", "MVC", "SCRUM"],
         role: "FULL-STACK DEVELOPER"
     },
@@ -44,7 +44,7 @@ const projects = [
         folder: "fpes",
         imageCount: 11,
         alt: "Faculty Performance Evaluation System",
-        description: "Web platform for evaluating instructors at Granby Colleges with dynamic questionnaires, real-time ranking, email notifications, and dedicated dashboards.",
+        description: "Developed a faculty performance evaluation system featuring dynamic questionnaires, role-based dashboards, real-time rankings, and automated email notifications, streamlining the instructor evaluation process and improving access to evaluation results.",
         techstack: ["PHP", "MySQL", "HTML5", "CSS", "JavaScript"],
         role: "FULL-STACK DEVELOPER"
     },
@@ -53,7 +53,7 @@ const projects = [
         folder: "granbypos",
         imageCount: 1,
         alt: "Granby Point of Sale (POS) System",
-        description: "Desktop POS used by the college cashier for processing student tuition and fees, with transaction recording and receipt generation.",
+        description: "Contributed to the development of a desktop-based point-of-sale system by implementing payment processing, transaction recording, and receipt generation features, supporting accurate and efficient processing of student payments.",
         techstack: ["C# Winforms", "MySQL"],
         role: "CONTRIBUTOR"
     }
