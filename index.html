@@ -70,10 +70,11 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8 text-gray-300">
                     <a href="#home" class="nav-link hover:text-blue-400 transition-colors duration-300">Home</a>
-                    <a href="#awards" class="nav-link hover:text-blue-400 transition-colors duration-300">Awards</a>
                     <a href="#about" class="nav-link hover:text-blue-400 transition-colors duration-300">About</a>
                     <a href="#skills" class="nav-link hover:text-blue-400 transition-colors duration-300">Skills</a>
                     <a href="#projects" class="nav-link hover:text-blue-400 transition-colors duration-300">Projects</a>
+                    <a href="#certificates" class="nav-link hover:text-blue-400 transition-colors duration-300">Certificates</a>
+                    <a href="#awards" class="nav-link hover:text-blue-400 transition-colors duration-300">Awards</a>
                     <a href="#contact" class="nav-link hover:text-blue-400 transition-colors duration-300">Contact</a>
                 </div>
                 
@@ -89,10 +90,11 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-gray-800 pt-4">
                 <div class="flex flex-col space-y-2">
                     <a href="#home" class="px-4 py-3 rounded-lg text-gray-300">Home</a>
-                    <a href="#awards" class="px-4 py-3 rounded-lg text-gray-300">Awards</a>
                     <a href="#about" class="px-4 py-3 rounded-lg text-gray-300">About</a>
                     <a href="#skills" class="px-4 py-3 rounded-lg text-gray-300">Skills</a>
                     <a href="#projects" class="px-4 py-3 rounded-lg text-gray-300">Projects</a>
+                    <a href="#certificates" class="px-4 py-3 rounded-lg text-gray-300">Certificates</a>
+                    <a href="#awards" class="px-4 py-3 rounded-lg text-gray-300">Awards</a>
                     <a href="#contact" class="px-4 py-3 rounded-lg text-gray-300">Contact</a>
                 </div>
             </div>
@@ -207,18 +209,8 @@
         </div>
     </section>
     
-    <!-- Awards Section -->
-    <section id="awards" class="py-20 px-4 bg-gray-800/50">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8 text-center">Recognition</h2>
-        </div>
-        <div class="max-w-6xl mx-auto">
-            <div id="awards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-        </div>
-    </section>
-
     <!-- About & Skills Section -->
-    <section id="about-skills" class="py-24 px-6">
+    <section id="about-skills" class="py-24 px-6 bg-gray-800/50">
         <div class="max-w-6xl mx-auto">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -380,20 +372,42 @@
         </div>
         </div>
     </section>
-
+    
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-gray-800/50">
+    <section id="projects" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
+            <p class="text-sm text-center uppercase tracking-[0.2em] text-blue-400 mb-10">Featured Projects</p>
 
             <div id="projects-container"
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
         </div>
     </section>
+    
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-4 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-sm text-center uppercase tracking-[0.2em] text-blue-400 mb-3">Certifications</p>
+
+            <div class="max-w-6xl mx-auto">
+                <div id="certificates-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section id="awards" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-sm text-center uppercase tracking-[0.2em] text-blue-400 mb-3">Awards & Recognition</p>
+
+            <div class="max-w-6xl mx-auto">
+                <div id="awards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-gradient-to-b from-gray-900 to-gray-950">
+    <section id="contact" class="py-24 bg-gray-800/50">
         <div class="max-w-5xl mx-auto px-6">
 
             <!-- Section Title -->
@@ -472,7 +486,7 @@
     </button>
 
     <!-- Footer -->
-    <footer class="py-8 px-4 border-t border-gray-800">
+    <footer class="py-8 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <p class="text-gray-400">© 2026 Dave Malaran. All rights reserved.</p>
         </div>
@@ -481,6 +495,7 @@
     <script src="./scripts/scrollbar.js"></script>
     <script src="./scripts/mobileView.js"></script>
     <script src="./scripts/dateTIme.js"></script>
+    <script src="./scripts/certificates.js"></script>
     <script src="./scripts/awards.js"></script>
     <script src="./scripts/projects.js"></script>
     <script> 
@@ -555,21 +570,22 @@
 
 <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
     <!-- Close button -->
-    <button
-        id="closeModal"
-        class="absolute top-5 right-5 text-white text-4xl hover:text-gray-300"
-    >
-        &times;
-    </button>
-
+    <button id="closeModal" class="absolute top-5 right-5 text-white text-4xl hover:text-gray-300">&times;</button>
     <!-- Image -->
-    <img
-        id="modalImage"
-        src=""
-        alt="Project Image"
-        class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl"
-    >
+    <img id="modalImage" src="" alt="Project Image" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl">
+</div>
+
+<div id="awardModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
+    <!-- Close button -->
+    <button id="closeAwardModal" class="absolute top-5 right-5 text-white text-4xl hover:text-gray-300">&times;</button>
+    <div class="flex flex-col items-center max-w-3xl">
+        <!-- Image -->
+        <img id="awardImage" src="" alt="Award Image" class="max-w-[90vw] max-h-[75vh] rounded-lg shadow-2xl">
+        <!-- Description -->
+        <p id="awardDescription" class="mt-4 text-center bg-black text-white text-lg max-w-2xl"></p>
+    </div>
 </div>
 
 <script src="./scripts/imageModal.js"></script>
+<script src="./scripts/awardsModal.js"></script>
 </html>
