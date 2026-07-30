@@ -27,6 +27,32 @@
             opacity: 0;
         }
     }
+    
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .delay-200 {
+        animation-delay: .4s;
+    }
+
+    .delay-500 {
+        animation-delay: .8s;
+    }
+
+    .delay-700 {
+        animation-delay: 1.2s;
+    }
     </style>
 </head>
 <body class="bg-gray-900 text-white overflow-x-auto">
@@ -84,9 +110,9 @@
 
                     <p class="text-blue-400 font-medium mb-4">▸ Available for opportunities — 2026</p>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4">Dave Malaran</h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-400 mb-6">PHP | Web Developer</h2>
+                    <h2 class="text-2xl md:text-3xl text-blue-400 mb-6">PHP | Web Developer</h2>
                     <p class="text-gray-400 max-w-xl mb-8 text-lg leading-relaxed">
-                        I'm BSIT graduate from Granby Colleges of Science and Technology. I design and develop web-based and desktop applications, with a focus on database-driven systems, responsive interfaces, and software that solves real problems.
+                        Full-Stack PHP Developer with internship experience building and maintaining production web applications using PHP, MySQL, JavaScript, and Tailwind CSS. Experienced in developing database-driven systems, implementing responsive interfaces, fixing production issues, and collaborating within Scrum teams. Passionate about building scalable web applications and continuously improving software development skills.
                     </p>
 
                     <!-- Buttons -->
@@ -105,36 +131,74 @@
                         </a>
                     </div>
 
-                    <!-- Social Links -->
-                    <div class="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
-                        <a href="https://github.com/04DEYB12" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
-                            <i class="fa-brands fa-github text-xl text-white group-hover:text-blue-400 transition-colors"></i>
-                            <span class="font-medium">GitHub</span>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/davemalaran" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
-                            <i class="fa-brands fa-linkedin text-xl text-white group-hover:text-blue-400 transition-colors"></i>
-                            <span class="font-medium">LinkedIn</span>
-                        </a>
-
-                        <a href="https://www.facebook.com/04.deyb.12" target="_blank" class="group flex items-center gap-3 px-5 py-3 rounded-xl bg-gray-800/80 border border-gray-700 hover:border-blue-500 hover:bg-gray-800 transition-all duration-300">
-                            <i class="fa-brands fa-facebook text-xl text-white group-hover:text-blue-400 transition-colors"></i>
-                            <span class="font-medium">Facebook</span>
-                        </a>
-                    </div>
-
                 </div>
 
                 <!-- Right Content -->
                 <div class="flex justify-center order-1 lg:order-2">
                     <div class="relative">
+
                         <!-- Glow Effect -->
                         <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+
                         <!-- Profile Image -->
-                        <img src="assets/malarandave.png" alt="Profile Picture" class="relative w-72 h-full md:w-96 md:h-full object-cover rounded-lg shadow-2xl shadow-blue-500/20">
+                        <img src="assets/malarandave.png" alt="Profile Picture" class="relative w-64 mt-10 md:w-96 md:mt-0 object-cover rounded-lg shadow-2xl shadow-blue-500/20">
+                        
+                        <!-- Awards -->
+                        <div class="absolute md:-top-6 top-5 -left-10 animate-float group">
+                            <div class="flex items-center gap-3 rounded-2xl border border-blue-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-blue-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-blue-500/30">
+                                <div class="flex h-8 w-8 md:h-12 md:w-12  items-center justify-center rounded-full bg-blue-500/15 ring-1 ring-blue-400/40">
+                                    <i class="bx bxs-trophy text-lg md:text-2xl text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="md:text-xl text-sm font-bold text-white">9</h3>
+                                    <p class="text-xs text-slate-400">Awards</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects -->
+                        <div class="absolute top-14 -right-12 animate-float [animation-delay:.5s] group">
+                            <div class="flex items-center gap-3 rounded-2xl border border-emerald-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-emerald-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-emerald-500/30">
+                                <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-emerald-500/15 ring-1 ring-emerald-400/40">
+                                    <i class="bx bxs-briefcase text-lg md:text-2xl text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="md:text-xl text-sm font-bold text-white">5</h3>
+                                    <p class="text-xs text-slate-400">Projects</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certificates -->
+                        <div class="absolute bottom-20 -left-12 animate-float [animation-delay:1s] group">
+                            <div class="flex items-center gap-3 rounded-2xl border border-amber-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-amber-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-amber-500/30">
+                                <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-amber-500/15 ring-1 ring-amber-400/40">
+                                    <i class="bx bxs-certification text-lg md:text-2xl text-amber-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="md:text-xl text-sm font-bold text-white">5</h3>
+                                    <p class="text-xs text-slate-400">Certificates</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Designs -->
+                        <div class="absolute -bottom-6 -right-10 animate-float [animation-delay:1.5s] group">
+                            <div class="flex items-center gap-3 rounded-2xl border border-pink-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-pink-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-pink-500/30">
+                                <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-pink-500/15 ring-1 ring-pink-400/40">
+                                    <i class="fab fa-git-alt text-lg md:text-2xl text-pink-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="md:text-xl text-sm font-bold text-white">260+</h3>
+                                    <p class="text-xs text-slate-400">Commits</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Typing Text -->
                         <p class="absolute bottom-[-16px] left-4 border-2 border-blue-500 bg-gray-900 text-white font-medium text-sm px-4 py-2 rounded-lg shadow-lg">
                             <span id="animatedText"></span><span class="cursor">|</span>
                         </p>
+
                     </div>
                 </div>
 

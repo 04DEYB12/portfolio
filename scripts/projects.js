@@ -28,7 +28,7 @@ const projects = [
         alt: "Servpro Database Management System",
         description: "Enhanced an internal database management system by implementing new features, resolving application issues, and performing system maintenance, improving system functionality and ensuring reliable day-to-day operations.",
         techstack: ["PHP", "MySQL", "HTML5", "TailwindCss", "JavaScript"],
-        role: "CONTRIBUTOR - OJT"
+        role: "PHP Web Developer Intern"
     },
     {
         title: "Blue Iris Cup — POS & Mini-Kiosk",
