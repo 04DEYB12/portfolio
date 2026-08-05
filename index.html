@@ -8,52 +8,7 @@
     <link href="./dist/output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-    @keyframes scroll {
-        from { transform: translateX(100%); }
-        to { transform: translateX(-100%); }
-    }
-
-    .animate-scroll {
-        animation: scroll 15s linear infinite;
-    }
-    
-    .cursor {
-        animation: blink 0.8s infinite;
-    }
-
-    @keyframes blink {
-        50% {
-            opacity: 0;
-        }
-    }
-    
-    @keyframes float {
-        0%,
-        100% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-12px);
-        }
-    }
-
-    .animate-float {
-        animation: float 4s ease-in-out infinite;
-    }
-
-    .delay-200 {
-        animation-delay: .4s;
-    }
-
-    .delay-500 {
-        animation-delay: .8s;
-    }
-
-    .delay-700 {
-        animation-delay: 1.2s;
-    }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body class="bg-gray-900 text-white overflow-x-auto">
     <!-- Navigation -->
@@ -146,7 +101,7 @@
                         <img id="dave" src="assets/malarandave.png" loading="lazy" alt="Profile Picture" class="relative w-64 mt-10 md:w-96 md:mt-0 object-cover rounded-lg shadow-2xl shadow-blue-500/20">
                         
                         <!-- Awards -->
-                        <div class="absolute md:-top-6 top-5 -left-10 animate-float group">
+                        <a href="#awards" class="absolute md:-top-6 top-5 -left-10 animate-float group">
                             <div class="flex items-center gap-3 rounded-2xl border border-blue-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-blue-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-blue-500/30">
                                 <div class="flex h-8 w-8 md:h-12 md:w-12  items-center justify-center rounded-full bg-blue-500/15 ring-1 ring-blue-400/40">
                                     <i class="bx bxs-trophy text-lg md:text-2xl text-blue-400"></i>
@@ -156,10 +111,10 @@
                                     <p class="text-xs text-slate-400">Awards</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Projects -->
-                        <div class="absolute top-14 -right-12 animate-float [animation-delay:.5s] group">
+                        <a href="#projects" class="absolute top-14 -right-12 animate-float [animation-delay:.5s] group">
                             <div class="flex items-center gap-3 rounded-2xl border border-emerald-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-emerald-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-emerald-500/30">
                                 <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-emerald-500/15 ring-1 ring-emerald-400/40">
                                     <i class="bx bxs-briefcase text-lg md:text-2xl text-emerald-400"></i>
@@ -169,10 +124,10 @@
                                     <p class="text-xs text-slate-400">Projects</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Certificates -->
-                        <div class="absolute bottom-20 -left-12 animate-float [animation-delay:1s] group">
+                        <a href="#certificates" class="absolute bottom-20 -left-12 animate-float [animation-delay:1s] group">
                             <div class="flex items-center gap-3 rounded-2xl border border-amber-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-amber-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-amber-500/30">
                                 <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-amber-500/15 ring-1 ring-amber-400/40">
                                     <i class="bx bxs-certification text-lg md:text-2xl text-amber-400"></i>
@@ -182,10 +137,10 @@
                                     <p class="text-xs text-slate-400">Certificates</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <!-- Designs -->
-                        <div class="absolute -bottom-6 -right-10 animate-float [animation-delay:1.5s] group">
+                        <!-- Commits -->
+                        <a href="https://github.com/04DEYB12" target="_blank" class="absolute -bottom-6 -right-10 animate-float [animation-delay:1.5s] group">
                             <div class="flex items-center gap-3 rounded-2xl border border-pink-500/30 bg-slate-900/80 backdrop-blur-xl px-4 py-3 shadow-xl shadow-pink-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-pink-500/30">
                                 <div class="flex h-8 w-8 md:h-12 md:w-12 items-center justify-center rounded-full bg-pink-500/15 ring-1 ring-pink-400/40">
                                     <i class="fab fa-git-alt text-lg md:text-2xl text-pink-400"></i>
@@ -195,7 +150,7 @@
                                     <p class="text-xs text-slate-400">Commits</p>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         <!-- Typing Text -->
                         <p class="absolute bottom-[-16px] left-4 border-2 border-blue-500 bg-gray-900 text-white font-medium text-sm px-4 py-2 rounded-lg shadow-lg">
                             <span id="animatedText"></span><span class="cursor">|</span>
@@ -479,6 +434,7 @@
         </div>
     </section>
     
+    <!-- Character -->
     <button id='chibi'onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 z-50 flex flex-col items-end transition-all duration-300">
         <!-- Chat Bubble -->
         <div class="relative mb-2 px-4 py-2 bg-white text-gray-800 text-sm rounded-xl shadow-lg">
@@ -492,6 +448,7 @@
             class="w-24 h-24 cursor-pointer transition-all duration-300 hover:-translate-y-1"
         >
     </button>
+    
     <!-- Scroll to Top Button -->
     <!-- <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center z-50">

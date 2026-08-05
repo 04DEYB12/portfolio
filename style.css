@@ -1,0 +1,44 @@
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+    animation: scroll 15s linear infinite;
+}
+
+.cursor {
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.delay-200 {
+    animation-delay: .4s;
+}
+
+.delay-500 {
+    animation-delay: .8s;
+}
+
+.delay-700 {
+    animation-delay: 1.2s;
+}

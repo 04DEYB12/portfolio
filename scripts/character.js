@@ -37,7 +37,7 @@ let currentSection = "";
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-    console.log(entry.target.id, entry.isIntersecting);
+    //console.log(entry.target.id, entry.isIntersecting);
         if (entry.isIntersecting) {
             const state = info[entry.target.id];
 
