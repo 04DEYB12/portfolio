@@ -34,13 +34,13 @@ const cert_container = document.getElementById("certificates-grid");
 certificatesItems.forEach(certificate => {
     const card = document.createElement("div");
 
-    card.className = "bg-gray-900/50 rounded-2xl p-4";
+    card.className = "bg-gray-800/10 rounded-2xl p-4";
 
     card.innerHTML = `
     <div class="grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-4 items-center py-4 border-b border-gray-700 hover:border-blue-500 transition">
 
         <!-- Image -->
-        <img src="${certificate.image}" alt="${certificate.title}"
+        <img loading='lazy' src="${certificate.image}" alt="${certificate.title}"
             class="w-14 h-14 object-cover rounded-lg">
 
         <!-- Title & Year -->

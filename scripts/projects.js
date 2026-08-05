@@ -75,22 +75,48 @@ projects.forEach((project, index) => {
         (_, i) => `assets/projects/${project.folder}/${i + 1}.png`
     );
         
+    const isPrivate = project.folder === "servpro";
+
     const carouselHTML = `
-        <div class="relative overflow-hidden">
-            <div id="carousel-${index}" class="flex transition-transform duration-500">
-                ${images.map(image => `
-                    <img
-                        src="${image}"
-                        alt="${project.alt}"
-                        onclick="openImage('${image}')"
-                        class="w-full h-56 object-cover flex-shrink-0 cursor-pointer"
-                    >
-                `).join("")}
-            </div>
+    <div class="relative overflow-hidden">
+        <div id="carousel-${index}" class="flex transition-transform duration-500">
 
             ${
-                project.imageCount > 1
+                isPrivate
                     ? `
+                    <div class="relative w-full flex-shrink-0">
+                        <img
+                            src="${images[0]}"
+                            alt="${project.alt}"
+                            class="w-full h-56 object-cover blur-sm select-none pointer-events-none"
+                        >
+
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="rotate-[-12deg] flex items-center gap-3 rounded-lg border-[3px] border-red-600 bg-white/90 px-6 py-3 shadow-xl">
+                                <img loading='lazy' src="assets/projects/servpro/servpro_logo.webp" alt="ServPro" class="h-4 w-auto object-contain opacity-80 grayscale">
+
+                                <span class="border-l-2 border-red-600 pl-3 text-lg font-black uppercase tracking-[0.3em] text-red-600">
+                                    PRIVATE
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    : images.map(image => `
+                        <img loading='lazy'
+                            src="${image}"
+                            alt="${project.alt}"
+                            onclick="openImage('${image}')"
+                            class="w-full h-56 object-cover flex-shrink-0 cursor-pointer"
+                        >
+                    `).join("")
+            }
+
+        </div>
+
+        ${
+            !isPrivate && project.imageCount > 1
+                ? `
                 <button
                     onclick="moveSlide(${index}, -1)"
                     class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2">
@@ -102,10 +128,10 @@ projects.forEach((project, index) => {
                     class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2">
                     <i class='bx bx-chevron-right'></i>
                 </button>
-            `
-                    : ""
-            }
-        </div>
+                `
+                : ""
+        }
+    </div>
     `;
 
     projectsContainer.innerHTML += `

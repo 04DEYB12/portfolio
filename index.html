@@ -143,7 +143,7 @@
                         <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
 
                         <!-- Profile Image -->
-                        <img src="assets/malarandave.png" alt="Profile Picture" class="relative w-64 mt-10 md:w-96 md:mt-0 object-cover rounded-lg shadow-2xl shadow-blue-500/20">
+                        <img id="dave" src="assets/malarandave.png" loading="lazy" alt="Profile Picture" class="relative w-64 mt-10 md:w-96 md:mt-0 object-cover rounded-lg shadow-2xl shadow-blue-500/20">
                         
                         <!-- Awards -->
                         <div class="absolute md:-top-6 top-5 -left-10 animate-float group">
@@ -478,12 +478,25 @@
             </div>
         </div>
     </section>
+    
+    <button id='chibi'onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 right-6 z-50 flex flex-col items-end transition-all duration-300">
+        <!-- Chat Bubble -->
+        <div class="relative mb-2 px-4 py-2 bg-white text-gray-800 text-sm rounded-xl shadow-lg">
+            <span id="bubble">Hi! 👋 Click me to go to the top.</span>
+            <!-- Bubble Tail -->
+            <div class="absolute -bottom-2 right-5 w-4 h-4 bg-white rotate-45"></div>
+        </div>
 
+        <!-- Character -->
+        <img id="character" src="assets/character/hello.png" alt="Hello" loading="lazy"
+            class="w-24 h-24 cursor-pointer transition-all duration-300 hover:-translate-y-1"
+        >
+    </button>
     <!-- Scroll to Top Button -->
-    <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    <!-- <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center z-50">
         <i class="fas fa-arrow-up text-lg"></i>
-    </button>
+    </button> -->
 
     <!-- Footer -->
     <footer class="py-8 px-4">
@@ -492,6 +505,7 @@
         </div>
     </footer>
 
+    <script src="./scripts/character.js"></script>
     <script src="./scripts/scrollbar.js"></script>
     <script src="./scripts/mobileView.js"></script>
     <script src="./scripts/dateTIme.js"></script>
@@ -499,25 +513,25 @@
     <script src="./scripts/awards.js"></script>
     <script src="./scripts/projects.js"></script>
     <script> 
-        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        const chibi = document.getElementById("chibi");
         
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('logo-text').innerHTML = '<span class="text-gray-400">&lt;/</span> <span class="text-blue-400">dave</span>loper <span class="text-gray-400">&gt;</span>';
             updateDateTime();
             setInterval(updateDateTime, 1000);
-            scrollTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
-            scrollTopBtn.classList.remove("opacity-100");
+            chibi.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+            chibi.classList.remove("opacity-100");
             
             animateText();
         });
         
         window.addEventListener("scroll", () => {
             if (window.scrollY > 300) {
-                scrollTopBtn.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
-                scrollTopBtn.classList.add("opacity-100");
+                chibi.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
+                chibi.classList.add("opacity-100");
             } else {
-                scrollTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
-                scrollTopBtn.classList.remove("opacity-100");
+                chibi.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+                chibi.classList.remove("opacity-100");
             }
         });
         

@@ -78,7 +78,7 @@ awardsItems.forEach(award => {
     <div class="grid grid-cols-[auto_1fr] md:grid-cols-[auto_1fr_auto] gap-4 items-center py-4 border-b border-gray-700 hover:border-blue-500 transition">
 
         <!-- Image -->
-        <img src="${award.image}" alt="${award.alt}"
+        <img loading='lazy' src="${award.image}" alt="${award.alt}"
             class="w-14 h-14 object-cover rounded-lg">
 
         <!-- Title & Year -->
